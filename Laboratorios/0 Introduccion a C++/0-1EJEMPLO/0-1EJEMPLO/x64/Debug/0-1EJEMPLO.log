@@ -1,0 +1,9 @@
+﻿  Source.cpp
+C:\Users\uo294255\Desktop\FCR LAB\0-1EJEMPLO\0-1EJEMPLO\Source.cpp(3,1): error C2146: error de sintaxis: falta ';' delante del identificador 'v'
+C:\Users\uo294255\Desktop\FCR LAB\0-1EJEMPLO\0-1EJEMPLO\Source.cpp(3,1): error C2466: no se puede asignar una matriz de tamaño constante 0
+C:\Users\uo294255\Desktop\FCR LAB\0-1EJEMPLO\0-1EJEMPLO\Source.cpp(3,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\uo294255\Desktop\FCR LAB\0-1EJEMPLO\0-1EJEMPLO\Source.cpp(3,1): error C2086: 'int v[4]': nueva definición
+C:\Users\uo294255\Desktop\FCR LAB\0-1EJEMPLO\0-1EJEMPLO\Source.cpp(1): message : vea la declaración de 'v'
+C:\Users\uo294255\Desktop\FCR LAB\0-1EJEMPLO\0-1EJEMPLO\Source.cpp(4,8): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\uo294255\Desktop\FCR LAB\0-1EJEMPLO\0-1EJEMPLO\Source.cpp(4,1): error C2369: 'v': nueva definición; subíndices distintos
+C:\Users\uo294255\Desktop\FCR LAB\0-1EJEMPLO\0-1EJEMPLO\Source.cpp(1): message : vea la declaración de 'v'
