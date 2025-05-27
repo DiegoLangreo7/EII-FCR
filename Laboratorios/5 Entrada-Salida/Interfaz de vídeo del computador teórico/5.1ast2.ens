@@ -1,0 +1,25 @@
+ORIGEN 0500h
+
+.DATOS
+
+  cadena VALOR '*'
+	
+.CODIGO
+  xor r0,r0,r0
+  movl r1,BYTEBAJO DIRECCION cadena
+  movh r1,BYTEALTO DIRECCION cadena
+  movh r2,0F0h
+  movl r2,00h
+  
+  bucle:
+  mov r3,[r1]
+  cmp r3,r0
+  brz fin_bucle
+  movh r3,07h
+  movl r3,14h
+  mov [r2],r3
+  inc r1
+  inc r2
+  jmp bucle
+  fin_bucle:
+ FIN
