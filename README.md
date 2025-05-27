@@ -108,6 +108,6 @@ Proyecto final dividido en fases.
 - **secondPhase.zip**  
   Paquete con datos de configuración y ficheros auxiliares para el proyecto.
 
-
+---
 ## Autor
-[Diego García González](https://github.com/DiegoLangreo7)
+[DiegoLangreo7](https://github.com/DiegoLangreo7)
