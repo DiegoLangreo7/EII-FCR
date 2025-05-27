@@ -1,0 +1,51 @@
+ORIGEN 1000h
+INICIO main
+.PILA 20h
+
+.CODIGO
+main:
+
+xor r3,r3,r3
+movl r0,00h
+movh r0,0F1h
+movl r1,77h
+movh r1,0F1h
+movl r4,'O'
+movh r4,24h
+movl r5,'0'
+movh r5,09h
+movl r6,'0'
+movh r6,12h
+mov r3,r0
+
+buclerojo:
+mov [r3],r4
+cmp r3,r1
+brz consecuente1
+inc r3
+jmp buclerojo
+consecuente1:
+mov r3,r0
+jmp bucleazul
+
+bucleazul:
+mov [r3],r5
+cmp r3,r1
+brz consecuente2
+inc r3
+jmp bucleazul
+consecuente2:
+mov r3,r0
+jmp bucleverde
+
+bucleverde:
+mov [r3],r6
+cmp r3,r1
+brz consecuente3
+inc r3
+jmp bucleverde
+consecuente3:
+mov r3,r0
+jmp buclerojo
+
+FIN

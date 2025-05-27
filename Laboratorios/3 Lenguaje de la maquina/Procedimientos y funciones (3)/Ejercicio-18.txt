@@ -1,0 +1,33 @@
+Principal:
+movl r5,00h
+movh r5,10h
+Call Buscar
+
+
+Buscar:
+mov r4, r1
+xor r1,r1,r1
+inicio_for:
+mov r0,[r5]
+cmp r1,r4
+brnc fin_for
+
+cmp r0,r2
+brz consecuente1
+jmp siguiente
+consecuente1:
+mov r3,r1
+jmp fin_for
+
+siguiente:
+inc r1
+inc r5
+jmp inicio_for
+fin_for:
+xor r1,r1,r1
+cmp r3,r1
+brz consecuente2
+ret
+consecuente2:
+movl r3,0FFh
+movh r3,0FFh

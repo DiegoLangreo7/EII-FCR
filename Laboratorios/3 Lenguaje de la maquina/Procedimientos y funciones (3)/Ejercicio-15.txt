@@ -1,0 +1,22 @@
+Principal :
+  movl r1,5
+  movh r1,0
+  movl r2,9
+  movh r2,0
+  call Max
+  nop
+
+Max:
+  cmp r1,r2
+  brnc consecuente1
+  nocumple:
+  mov r0,r2
+  ret
+  consecuente1:
+  brnz consecuente2
+  jmp nocumple
+  consecuente2:
+  mov r0,r1
+  ret
+ 
+ 

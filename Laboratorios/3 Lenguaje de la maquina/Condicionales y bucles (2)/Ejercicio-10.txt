@@ -1,0 +1,13 @@
+XOR R1,R1,R1
+
+MOVL R2,00
+MOVH R2,01
+
+inicio_for:
+CMP R1,R2
+BRNC fin_for
+ADD R0,R0,R1
+INC R1
+JMP inicio_for
+
+fin_for:

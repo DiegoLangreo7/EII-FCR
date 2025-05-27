@@ -1,0 +1,28 @@
+Principal:
+movl r0,5
+movh r0,0
+movl r1,9
+movh r1,0
+call MaxMin
+
+
+MaxMin:
+movl r2,00
+movh r2,05
+movl r3,01
+movh r3,05
+cmp r1,r2
+brnc consecuente1
+noCondition:
+mov [r2],r1
+mov [r3],r0
+ret
+consecuente1:
+brnz consecuente2
+jmp noCondition
+consecuente2:
+mov [r2],r0
+mov [r3],r1
+ret
+
+

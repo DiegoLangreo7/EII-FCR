@@ -1,0 +1,3 @@
+MOVL R0,00h
+MOVH R0,05h
+MOV R3,[R0]                                                                                                                                                           

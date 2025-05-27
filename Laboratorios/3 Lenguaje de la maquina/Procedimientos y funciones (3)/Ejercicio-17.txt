@@ -1,0 +1,32 @@
+Principal:
+movl r4,00h
+movh r4,10h
+call Maximo
+nop
+
+Maximo:
+xor r3,r3,r3
+xor r1,r1,r1
+mov r2, r5
+inicio_for:
+cmp r1,r5
+brnc fin_for
+call Max
+inc r1
+inc r4
+jmp inicio_for
+fin_for:
+ret
+
+Max:
+  mov r6,[r4]
+  cmp r6,r0
+  brnc consecuente1
+  nocumple:
+  ret
+  consecuente1:
+  brnz consecuente2
+  jmp nocumple
+  consecuente2:
+  mov r0,r6
+  ret

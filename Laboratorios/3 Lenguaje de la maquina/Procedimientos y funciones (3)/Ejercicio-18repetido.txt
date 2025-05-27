@@ -1,0 +1,56 @@
+Principal:
+movl r1,4
+movh r1,00h
+push r1
+movl r1,5
+movh r1,00h
+push r1
+movl r1,00h
+movh r1,10h
+push r1
+call Buscar
+inc r7
+FIN
+
+Buscar:
+push r6
+mov r6,r7
+push r1
+push r2
+push r3
+push r4
+push r5
+inc r6
+inc r6
+mov r2,[r6] ;r2 direccion de memoria del primer vector
+inc r6
+mov r3,[r6] ;r3 numero de valores en el array
+inc r6
+mov r4,[r6] ;r4 numero a buscar
+
+xor r1,r1,r1 ;r1 == i
+
+for:
+cmp r1,r3
+brnc fin_for
+
+mov r5,[r2]
+cmp r5,r4
+brz consecuente
+jump siguiente
+consecuente:
+mov r0,r5
+siguiente:
+inc r2
+inc r1
+jmp for
+
+fin_for:
+
+xor r1,r1,r1
+cmp r1,r0
+brnz finalizacion
+movl r0,0FFh
+movh r0,0FFh
+finalizacion:
+ret
